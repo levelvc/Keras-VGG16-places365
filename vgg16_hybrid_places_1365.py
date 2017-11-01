@@ -85,7 +85,8 @@ def VGG16_Hybrid_Places1365(include_top=True, weights='places',
     input_shape = _obtain_input_shape(input_shape,
                                       default_size=224,
                                       min_size=48,
-                                      data_format=K.image_data_format())
+                                      data_format=K.image_data_format(),
+                                      require_flatten=True)
 
 
     if input_tensor is None:
